@@ -36,8 +36,17 @@ int main()
                                 cout<<"You'll need a bigger list!"<<endl;
                 }
         }
-        }
-        while (input != 'Q' && input != 'q');
+}
+      while (input != 'Q' && input != 'q');
+      cout<<"==ITEMS TO BUY=="<<endl;
+      
 
+      for( int index=0; index<5; index++ )
+  
+          
+  {
+    
+    cout<<index+1<<" "<<list[index]<<endl;
+  }
         return 0;
 }
