@@ -1,14 +1,16 @@
 //Eric Perez
 #include<iostream>
 #include<string>
+#include<vector>
 using namespace std;
 
 int main()
 {
-        string list[5]; //array of 5 strings
+        vector <string> list; //array of 5 strings
+        string item;
         int numItems = 0;
         char input;
-        string num1;
+        
 
         do{
                 cout<<"\n==GROCERY LIST MANAGER==";
@@ -21,32 +23,31 @@ int main()
                 {
                        cout<<"What is the item?\n";
                        
-                        cin>>num1;
+                        cin>>item;
+                        list.push_back(item);
+                        numItems++;
+                }        
 
                       
                         
-                                if (numItems <5){
-                                        list[numItems] = num1;
-                                        numItems++;
+                               else if ((input == 'q' || input == 'Q') && numItems == 0)
+                            {            
+                             
+                             cout<<"No items to buy!"<<endl;
+
                                 }
 
-                        
-                        else
-                        {
-                                cout<<"You'll need a bigger list!"<<endl;
-                }
-        }
-}
-      while (input != 'Q' && input != 'q');
-      cout<<"==ITEMS TO BUY=="<<endl;
-      
+                        }
+                        while(!(input == 'q' || input == 'Q'));
 
-      for( int index=0; index<5; index++ )
-  
-          
-  {
-    
-    cout<<index+1<<" "<<list[index]<<endl;
+                        if(numItems != 0)
+                        {
+                                cout<<"==ITEMS TO BUY=="<<endl;
+
+                                for(int index = 0; index < numItems; index++)
+                               {
+                                 cout<<index+1<<" "<<list[index]<<endl;
+                                }
   }
         return 0;
 }
