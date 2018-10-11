@@ -20,7 +20,6 @@ int main()
                 {
                         cout<<"\n (D)elete last item";
                 }
-                cout<<"\n (D)elete last item";
                 cout<<"\n (Q)uit";
                 cout<<"\nYour choice (A/Q): ";
                 cin>>input;
@@ -56,7 +55,7 @@ int main()
         {
                 cout<<"==ITEMS TO BUY=="<<endl;
 
-                for(int index = 0; index < numItems; index++)//List starts counting from 0
+                for(int index = 0; index <list.size();index++)//List starts counting from 0
                 {
                         cout<<index+1<<" "<<list[index]<<endl;//List starts at 1 then 2 and 3 and so on...
                 }
